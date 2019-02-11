@@ -2,7 +2,7 @@
 
 add(X,Y,A):- A is X+Y.
 
-substract(X,Y,S):- S is X-Y.
+substract(X,Y,S):- S is X-Y.Document 1 non enregistré
 
 mult(X,Y,M):- M is X*Y.
 
@@ -10,11 +10,15 @@ div(X,Y,D):- D is X/Y.
 
 /* III */
 
+occ(A,[],0).
+occ(A, [A|Xs], C) :- occurence(A, Xs, C1), C is C1+1.
+occ(A, [_|Xs], C) :- occurence(A, Xs, C). 
 
-occ(_,[],0).
-occ(A,[A],1).
+longueur_liste([], 0).
+longueur_liste([X|Xs],N):- longueur_liste(Xs,N1), N is N1+1.
 
-occ(A, B, O):- 0 is  
+append([], Y, Y).
+append([X|Xs], Y, [X, Z]) :- append(X,Y,Z).
 
-longueur([],0).
-longueur([X|Xs],N):- longueur(Xs,N1),N is N1 + 1.
+n_eme(1, [X|Xs], N).
+n_eme(X, [_|Xs], N) :- X1 is X-1, n_eme(X1, Xs, N).
