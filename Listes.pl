@@ -1,3 +1,5 @@
+/* Grégory Haton 18910030 */
+
 /* II */
 
 add(X,Y,A):- A is X+Y.
@@ -22,3 +24,13 @@ append([X|Xs], Y, [X, Z]) :- append(X,Y,Z).
 
 n_eme(1, [X|Xs], N).
 n_eme(X, [_|Xs], N) :- X1 is X-1, n_eme(X1, Xs, N).
+
+
+dernier([],[]).
+dernier([X],X).
+dernier([X|Xs], D) :-
+
+rev([],[]).
+rev([X|Xs]) :- rev(X,[],Xs, Xs).
+
+rev([],Xs,Xs,[]).
