@@ -2,7 +2,7 @@
 
 add(X,Y,A):- A is X+Y.
 
-substract(X,Y,S):- S is X-Y.Document 1 non enregistré
+substract(X,Y,S):- S is X-Y.
 
 mult(X,Y,M):- M is X*Y.
 
